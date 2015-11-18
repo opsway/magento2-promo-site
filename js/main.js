@@ -6,7 +6,7 @@ void 0===c?d&&"get"in d&&null!==(e=d.get(a,b))?e:(e=n.find.attr(a,b),null==e?voi
 (function ($) {
     var redirectToDemo  = function redirectToDemo() {
             var url = $('.subscribe-popup').attr('data-url');
-            window.open(url, '_blank')
+            window.open(url, '_blank');
             return false;
         },
         setCookie = function setCookie(name, value) {
