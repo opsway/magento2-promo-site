@@ -738,13 +738,14 @@ body {
     display: inline-block;
     box-sizing: border-box;
     width: 406px;
-    height: 404px;
+    height: 480px;
     margin: 0 30px 30px 0;
     padding: 40px;
     text-align: left;
     vertical-align: top;
     background-color: #ededed;
     font-size: 16px;
+    position: relative;
 }
 
 .panels__item h2 {
@@ -754,7 +755,6 @@ body {
 }
 
 .panels__item p {
-    margin: 35px 0 16px;
     color: #4b4b4b;
     font: 400 16px/1.5 'Open Sans', sans-serif;
 }
@@ -805,6 +805,9 @@ body {
 
 .control-group {
     text-align: center;
+    bottom: 20px;
+    left: 12%;
+    position: absolute;
 }
 
 .button {
