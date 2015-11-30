@@ -18,16 +18,26 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js" media="all"></script><![endif]-->
   </head>
   <body>
-  <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    <div id="fb-root"></div>
+    <script type="text/javascript">
+      (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
+      fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-      ga('create', 'UA-42235866-1', 'auto');
-      ga('send', 'pageview');
+        ga('create', 'UA-42235866-1', 'auto');
+        ga('send', 'pageview');
 
-  </script>
+    </script>
     <div data-url="http://magento2.opsway.com/" data-title="Magento 2 DEMO for you" data-description="Try Magento 2 demo in different store configurations for free!" class="share42init"></div>
     <main role="main" class="wrapper">
       <section class="land-section header">
@@ -79,9 +89,9 @@
             <p>
               <ul>
                 <li>Improvement infrastructure stack: Nginx 1.9, PHP 5.6, Percona Server 5.6</li>
-                <li>Large sample data: 
+                <li>Large sample data:
                 <ul>
-                  <li>Websites: 1</li> 
+                  <li>Websites: 1</li>
                   <li>Categories: ~400</li>
                   <li>Simple products: ~80 000</li>
                   <li>Configurable products: ~1 000</li>
@@ -97,17 +107,17 @@
             <p>
               <ul>
                 <li>Maximum infrastructure stack Varnish 4.0, Nginx 1.9, PHP 7.0 (!), Redis, MariaDB 10</li>
-                <li>Extra large sample data: 
-                                <ul>
-                  <li>Websites: 2</li> 
-                  <li>Categories: ~2 000</li>
-                  <li>Simple products: ~80 000</li>
-                  <li>Configurable products: ~2 000</li>
-                  <li>Customers: ~2 000</li>
-                  <li>Cart Price Rules: 20</li>
-                  <li>Catalog Price Rules: 20</li>
-                  <li>Orders: 2 000</li>
-                </ul>
+                <li>Extra large sample data:
+                  <ul>
+                    <li>Websites: 2</li>
+                    <li>Categories: ~2 000</li>
+                    <li>Simple products: ~80 000</li>
+                    <li>Configurable products: ~2 000</li>
+                    <li>Customers: ~2 000</li>
+                    <li>Cart Price Rules: 20</li>
+                    <li>Catalog Price Rules: 20</li>
+                    <li>Orders: 2 000</li>
+                  </ul>
                 </li>
                 <li>Docker Virtualization</li>
               </ul>
@@ -146,7 +156,9 @@
     <div data-url class="subscribe-popup">
       <div class="subscribe-popup__close">✕</div>
       <div class="subscribe-popup__title">Stay in touch with us!</div>
-      <div class="subscribe-popup__message">We'll update you as soon as new demo will be available!</div><!-- Begin MailChimp Signup Form -->
+      <div class="subscribe-popup__message subscribe-popup__message_mailchimp">We'll update you as soon as new demo will be available!</div>
+      <div class="subscribe-popup__message subscribe-popup__message_fb">Magetips - all useful info about Magento in one place!</div>
+      <!-- Begin MailChimp Signup Form -->
       <div id="mc_embed_signup">
         <form action="//magetips.us12.list-manage.com/subscribe/post?u=3ce0a0fe8fb6d6190a12668d7&amp;amp;id=8c28de0c7b" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate class="validate">
           <div id="mc_embed_signup_scroll">
@@ -166,7 +178,13 @@
             </div>
           </div>
         </form>
-      </div><!--End mc_embed_signup-->
+      </div>
+      <!--End mc_embed_signup-->
+      <div data-href="https://www.facebook.com/magetipscom" data-width="400" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="false" class="fb-page popup-social_fb">
+        <div class="fb-xfbml-parse-ignore">
+          <blockquote cite="https://www.facebook.com/opswaysupport/"><a href="https://www.facebook.com/opswaysupport/">OpsWay</a></blockquote>
+        </div>
+      </div>
     </div>
   </div>
   <script src="./js/main.js" media="all"></script>

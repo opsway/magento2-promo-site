@@ -18,13 +18,30 @@ void 0===c?d&&"get"in d&&null!==(e=d.get(a,b))?e:(e=n.find.attr(a,b),null==e?voi
             "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
             ));
             return matches ? decodeURIComponent(matches[1]) : undefined;
+        },
+        choosePopupVariant = function choosePopupVariant() {
+            var variants = ['mailchimp','fbLike'],
+                variant = Math.round(Math.random());
+            return variants[variant];
         };
 
     $('.control-group').on('click', '.js-subscribe', function (e) {
         e.preventDefault();
-        var url = $(this).attr('href');
-        $('.subscribe-popup').attr('data-url', url);
+        var url = $(this).attr('href'),
+            popupVariant = choosePopupVariant();
+
+        $('.subscribe-popup')
+          .attr('data-url', url)
+          .removeClass('mailchimp','fbLike')
+          .addClass(popupVariant);
         jQuery('#mce-MMERGE1').val(url);
+
+        ga('send', {
+            'hitType': 'event',
+            'eventCategory': 'popup',
+            'eventAction': 'show',
+            'eventLabel': popupVariant
+        });
 
         if (getCookie('is-subscribed')) {
             redirectToDemo(url);
