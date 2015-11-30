@@ -710,6 +710,10 @@ body {
     font: 400 187.5%/1.3 'Open Sans', sans-serif;
 }
 
+.features__link {
+    color: #fff;
+}
+
 .demos {
     margin: 144px 0 92px;
     background-color: #fff;
