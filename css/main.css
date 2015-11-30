@@ -1008,12 +1008,17 @@ body {
     background: #ededed;
 }
 
+.subscribe-popup.fbLike {
+    height: 370px;
+}
+
 .subscribe-popup__title {
     margin: 0;
     font: 600 24px/1.5 'Open Sans', sans-serif;
 }
 
 .subscribe-popup__message {
+    display: none;
     font: 600 16px/1.5 'Open Sans', sans-serif;
 }
 
