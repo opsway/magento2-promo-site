@@ -46,12 +46,16 @@ void 0===c?d&&"get"in d&&null!==(e=d.get(a,b))?e:(e=n.find.attr(a,b),null==e?voi
         if (getCookie('is-subscribed')) {
             redirectToDemo(url);
         } else {
-            $('.subscribe-group').show();
+            if (popupVariant == 'fbLike') {
+              FB.Event.subscribe('edge.create', $('.subscribe-group').show(500));
+            } else {
+              $('.subscribe-group').show();
+            }
         }
         return false;
     });
 
-    $('.subscribe-popup').on('click', '.subscribe-popup__close', function (e) {
+    $('.subscribe-popup').on('click', '.js-close', function (e) {
         $('.subscribe-group').hide();
         redirectToDemo();
     });

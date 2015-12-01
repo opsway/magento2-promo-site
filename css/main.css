@@ -974,6 +974,11 @@ body {
     text-align: right;
 }
 
+.control-group_center {
+    text-align: center;
+    position: static;
+}
+
 /* Subscribe popup */
 
 .subscribe-group {
@@ -1000,7 +1005,7 @@ body {
     left: 0;
     box-sizing: border-box;
     width: 577px;
-    height: 290px;
+    height: 306px;
     margin: auto;
     padding: 40px;
     opacity: 1;
@@ -1057,6 +1062,16 @@ body {
     right: 20px;
     cursor: pointer;
     color: #737373;
+}
+
+.subscribe-popup__link {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 10px;
+    color: #aaa;
+    text-decoration: underline;
+    font-style: italic;
+    cursor: pointer;
 }
 
 #mc_embed_signup,
