@@ -32,7 +32,7 @@ void 0===c?d&&"get"in d&&null!==(e=d.get(a,b))?e:(e=n.find.attr(a,b),null==e?voi
 
         $('.subscribe-popup')
           .attr('data-url', url)
-          .removeClass('mailchimp','fbLike')
+          .removeClass('mailchimp fbLike')
           .addClass(popupVariant);
         jQuery('#mce-MMERGE1').val(url);
 
