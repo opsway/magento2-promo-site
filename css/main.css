@@ -1095,6 +1095,10 @@ body {
     cursor: pointer;
 }
 
+.feedback--form{
+    position: relative;
+}
+
 .feedback {
     padding: 20px 0px;
     width: 800px;
@@ -1155,6 +1159,16 @@ body {
   background: #22b14d;
   border: none !important;
   font-family: 'Open Sans', sans-serif;
+  outline: none;
+}
+
+.feedback--button:hover{
+  cursor: pointer;
+  background: #0e7d2f;
+}
+
+.feedback--button:focus{
+  outline: none;
 }
 
 .error-message, .error-message_textarea {
@@ -1180,16 +1194,36 @@ body {
 }
 
 .form-respond{
+  position: absolute;
   margin-top: 10px;
-  display: none;
+  opacity: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  padding: 60px 0;
+  background: rgba(255,255,255,.85);
+  box-sizing: border-box;
+  font-size: 24px;
+  transition: opacity 300ms ease-in;
 }
 
 .validation-wrap{
   position: relative;
 }
 
+.form-respond__text{
+  color: #22b14d;
+}
+
+.form-respond__link{
+  color: #278eff
+}
+
 .form-respond.visible{
-  display: block;
+  opacity: 1;
+  z-index: 2;
 }
 
 .error.feedback--input ~ .error-message {
