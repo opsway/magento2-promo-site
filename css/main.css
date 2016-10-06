@@ -613,7 +613,8 @@ body {
 
 .land-section_opsway {
     padding: 110px 0 78px;
-    background: url('../img/slide3-bgr.png') 50% 50% no-repeat;
+    background: url('../img/slide3-bgr.png') center no-repeat;
+    background-size: cover;
 }
 
 .land-section__scroller {
@@ -690,15 +691,22 @@ body {
 }
 
 .features {
-    height: 639px;
+    min-height: 100%;
+    height: auto;
     color: #fff;
-    background: url('../img/slide2-bgr.png') 50% 50% no-repeat;
+    background: url('../img/slide2-bgr.png') no-repeat;
+    background-size: cover;
+    padding-bottom: 50px;
 }
 
-.features__title {
+.features__title, .contacts-title {
     margin: 0;
     padding: 60px 0 102px;
-    font: 400 225%/1.3 'Open Sans', sans-serif;
+    font: 100 52px/1.3 'Open Sans', sans-serif;
+}
+
+.contacts-title{
+  padding: 60px 0 20px;
 }
 
 .features__question {
@@ -732,6 +740,15 @@ body {
 .magento-features__item {
     display: inline-block;
     vertical-align: top;
+    width: 33.333%;
+    box-sizing: border-box;
+}
+
+.magento-features__item-desc{
+  margin-top: 10px;
+  font-size: 80%;
+  color: rgba(255,255,255,.8);
+  display: block;
 }
 
 .panels {
@@ -839,14 +856,15 @@ body {
 
 .footer {
     box-sizing: border-box;
-    height: 274px;
+    height: 225px;
     padding: 32px 0 52px;
     text-align: center;
     background-color: #fff;
 }
 
 .footer__logo {
-    margin-bottom: 50px;
+    margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 .footer__address {
@@ -1077,6 +1095,112 @@ body {
     cursor: pointer;
 }
 
+.feedback {
+    padding: 20px 0px;
+    width: 800px;
+    margin: 0 auto;
+}
+.feedback:before, .feedback:after{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.feedback-col{
+  width: 50%;
+  float: left;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+.feedback--text {
+  font-size: 18px;
+  margin-top: 5px;
+}
+
+.feedback--input, .feedback--textarea {
+  height: 55px;
+  line-height: 55px;
+  background: transparent;
+  border: 1px solid #ccc;
+  color: #999;
+  width: 100%;
+  padding: 0 10px !important;
+  border-radius: 2px !important;
+  font-family: 'Open Sans', sans-serif !important;
+  font-weight: 100;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.feedback--input:focus, .feedback--textarea:focus {
+  color: #212121;
+}
+
+.feedback--textarea {
+  line-height: 1.5;
+  height: 195px;
+  padding: 15px 10px !important;
+  display: block;
+}
+
+.feedback--button {
+  border-radius: 25px !important;
+  padding: 0px 30px;
+  display: inline-block !important;
+  text-transform: uppercase;
+  font-weight: 100;
+  color: #ffffff;
+  height: 40px;
+  line-height: 40px;
+  background: #22b14d;
+  border: none !important;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.error-message, .error-message_textarea {
+    position: absolute;
+    left: 0px;
+    top: 100%;
+    width: 220px;
+    border-radius: 0;
+    background: #f05268;
+    color: #ffffff;
+    font-family: 'Open Sans', sans-serif;
+    padding: 25px 10px;
+    font-size: 13px;
+    line-height: 1.5;
+    text-align: center;
+    font-weight: 100;
+    display: none;
+    z-index: 1;
+}
+
+.mb-15{
+  margin-bottom: 15px;
+}
+
+.form-respond{
+  margin-top: 10px;
+  display: none;
+}
+
+.validation-wrap{
+  position: relative;
+}
+
+.form-respond.visible{
+  display: block;
+}
+
+.error.feedback--input ~ .error-message {
+    display: block;
+}
+
+.error.feedback--input {
+    border: 1px solid #f05268;
+    color: #f05268;
+}
+
 #mc_embed_signup,
 .fb-page.popup-social_fb {
     display: none;
@@ -1172,10 +1296,6 @@ body {
     .header__question{
         font: 600 200%/1 'Open Sans', sans-serif;
     }
-    .features__title{
-        font: 400 175%/1.3 'Open Sans', sans-serif;
-        padding: 0 20px 50px 20px;
-    }
     .demos__title{
         font: 400 200%/1.3 'Open Sans', sans-serif;
         margin: 0 20px 40px 20px;
@@ -1263,6 +1383,14 @@ body {
     .opsway-features__item{
         width: 40%;
     }
+    .features__title, .contacts-title{
+      font-size: 36px;
+      padding: 20px 0 40px;
+    }
+    .magento-features__item{
+      width: 100%;
+      margin-bottom: 40px;
+    }
 }
 @media (max-width: 380px){
     .panels__item{
@@ -1291,4 +1419,19 @@ body {
     .header__question{
         font: 600 175%/1 'Open Sans', sans-serif;
     }
+}
+
+@media (max-width: 1024px){
+  .feedback{
+    width: auto;
+  }
+  .feedback-col{
+    width: 100%;
+    float: none;
+    box-sizing: border-box;
+  }
+  .magento-features__item{
+    width: 100%;
+    margin-bottom: 40px;
+  }
 }
