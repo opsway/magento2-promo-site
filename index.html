@@ -50,7 +50,7 @@
     <div data-url="http://magento2.opsway.com/" data-title="Magento 2 DEMO for you" data-description="Try Magento 2 demo in different store configurations for free!" class="share42init"></div>
     <main role="main" class="wrapper">
       <section class="land-section features">
-        <h2 class="features__title">Benefits of Magento 2</h2>
+        <h2 class="features__title">It's time for Magento2!</h2>
         <div class="magento-features">
           <div class="magento-features__item">
             <figure class="image image_features"><img src="img/performance.png" alt="Performance">
@@ -88,6 +88,9 @@
             </figure>
           </div>
         </div>
+        <div>
+          <span class="magento-features__scroll-btn" id="scrollToForm">Evaluate your costs</span>
+        </div>
       </section>
       <section class="land-section land-section_opsway">
         <p class="land-section__opsway-message">OpsWay has been preparing for this new release for quite a long time.<br>Thanks to the knowledge and experience of our certified Magento<br>experts we can offer you best services for you<br>Magento 2.0 store.</p>
@@ -107,8 +110,8 @@
           </div>
         </div>
       </section>
-      <section class="land-section">
-        <h2 class="contacts-title">Contact Us Today!</h2>
+      <section class="land-section" id="evaluateForm">
+        <h2 class="contacts-title">Evaluate the costs of your M2 project</h2>
         <form class="feedback--form" id="-feedback-form">
             <div class="feedback">
                 <div class="feedback-col">
@@ -193,6 +196,10 @@
   <script src="./js/share42/share42.js" media="all"></script>
   <script>
     $(document).ready(function(){
+        $('#scrollToForm').click(function () {
+          var formPosition = $('#evaluateForm').position();
+          $('body, html').animate({scrollTop: formPosition.top+'px'}, '500');
+        })
         $('#-feedback-form').submit(function (e) {
             e.stopPropagation();
             e.preventDefault();

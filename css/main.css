@@ -592,7 +592,7 @@ body {
 html,
 body {
     width: 100%;
-    height: 100%;
+    min-height: 100%;
 }
 
 body {
@@ -691,7 +691,7 @@ body {
 }
 
 .features {
-    min-height: 100%;
+    min-height: 100vh;
     height: auto;
     color: #fff;
     background: url('../img/slide2-bgr.png') no-repeat;
@@ -1235,6 +1235,18 @@ body {
     color: #f05268;
 }
 
+.magento-features__scroll-btn{
+  font-size: 24px;
+  padding: 10px 50px;
+  border: 2px solid;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.magento-features__scroll-btn:hover{
+  background: rgba(255,255,255,.1);
+}
+
 #mc_embed_signup,
 .fb-page.popup-social_fb {
     display: none;
@@ -1431,6 +1443,9 @@ body {
         width: 100%;
         margin-left:0;
         margin-right: 0;
+    }
+    .magento-features__scroll-btn{
+      font-size: 21px;
     }
 }
 @media (max-width: 325px){
