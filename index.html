@@ -3,13 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>OpsWay - Magento 2 Demo - Promo</title>
+    <title>It's time for Magento2!</title>
     <meta name="description" content>
     <meta property="og:url" content="http://magento2.opsway.com/">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Magento 2 DEMO for you">
     <meta property="og:description" content="Try Magento 2 demo in different store configurations for free!">
-    <meta property="og:image" content="http://magento2.opsway.com/img/magento2demo.jpg">
+    <meta property="og:image" content="http://magento2.opsway.com/img/migrateToM2.jpg">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="Description" content="Magento 2 demo in different store configurations with admin access for free!">
     <meta name="Keywords" content="Magento 2, demo, admin access, php7, e-commerce, opsway, development">
@@ -50,11 +50,11 @@
     <div data-url="http://magento2.opsway.com/" data-title="Magento 2 DEMO for you" data-description="Try Magento 2 demo in different store configurations for free!" class="share42init"></div>
     <main role="main" class="wrapper">
       <section class="land-section features">
-        <h2 class="features__title">It's time for Magento2!</h2>
+        <h2 class="features__title">Migrate your store to Magento2</h2>
         <div class="magento-features">
           <div class="magento-features__item">
             <figure class="image image_features"><img src="img/performance.png" alt="Performance">
-              <figcaption>
+              <figcaption class="fadeInDownFast">
                 Outstanding performance<br/>
                 <small class="magento-features__item-desc">
                   Magento 2 will run an average of 20% faster.
@@ -66,7 +66,7 @@
           </div>
           <div class="magento-features__item">
             <figure class="image image_features"><img src="img/scalability.png" alt="Scalability">
-              <figcaption>
+              <figcaption class="fadeInDownMed">
                 Great new features<br/>
                 <small class="magento-features__item-desc">
                   Mobile compatibility, usability-driven checkout,
@@ -77,7 +77,7 @@
           </div>
           <div class="magento-features__item">
             <figure class="image image_features"><img src="img/comfort.png" alt="Comfort for Managers" style="height: 96px;">
-              <figcaption>
+              <figcaption class="fadeInDownSlow">
                 Support<br/>
                 <small class="magento-features__item-desc">
                   Magento development is now targeting version 2.
@@ -89,7 +89,10 @@
           </div>
         </div>
         <div>
-          <span class="magento-features__scroll-btn" id="scrollToForm">Evaluate your costs</span>
+          <span class="magento-features__scroll-btn" id="scrollToForm">Start your migration</span>
+        </div>
+        <div>
+          <span class="land-section__scroller">There's more!</span>
         </div>
       </section>
       <section class="land-section land-section_opsway">
@@ -111,7 +114,7 @@
         </div>
       </section>
       <section class="land-section" id="evaluateForm">
-        <h2 class="contacts-title">Evaluate the costs of your M2 project</h2>
+        <h2 class="contacts-title">Get estimation of your M2 project</h2>
         <form class="feedback--form" id="-feedback-form">
             <div class="feedback">
                 <div class="feedback-col">
@@ -139,19 +142,19 @@
                 </div>
             </div>
             <div class="text-center">
-                <button type="submit" class="button-main feedback--button" id="-submit-button">send</button>
+                <button type="submit" class="button-main feedback--button" id="-submit-button">contact us</button>
             </div>
             <div class="form-respond">
               <p class="form-respond__text">Thank you, we'll contact you soon to discuss details!</p>
-              <p>Want to know details?<br/>
+              <p>Want to know more?<br/>
               <a class="form-respond__link" target="_blank" href="http://magetips.com/what-s-new-in-magento-2-main-features.html?utm_source=Demo2_landing&utm_medium=Landing&utm_campaign=Demo2_landing">Check out presentation on this topic!</a></p>
             </div>
         </form>
       </section>
       <div role="contentinfo" class="footer">
-        <div class="footer__logo"><img src="img/site-logo.svg" alt="OpsWay logo"></div>
+        <div class="footer__logo"><a href="http://opsway.com/" target="_blank"><img src="img/site-logo.svg" alt="OpsWay logo"></a></div>
         <div class="footer__address">Vilniaus gatvė 31, LT-01402 Vilnius</div>
-        <div class="footer__mail">start@opsway.com</div>
+        <div class="footer__mail"><a href="mailto:start@opsway.com" target="_blank">start@opsway.com</a></div>
       </div>
     </main>
   </body>
@@ -197,12 +200,14 @@
   <script>
     $(document).ready(function(){
         $('#scrollToForm').click(function () {
+          ga('send', 'event', 'eval', 'your', 'costs');
           var formPosition = $('#evaluateForm').position();
           $('body, html').animate({scrollTop: formPosition.top+'px'}, '500');
         })
         $('#-feedback-form').submit(function (e) {
             e.stopPropagation();
             e.preventDefault();
+            ga('send', 'event', 'send', 'btn', 'push');
             var valid = validate(this);
             if(valid) {
                 console.log(this.name.value);
