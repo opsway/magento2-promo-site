@@ -705,7 +705,7 @@ body {
 
 .features__title, .contacts-title {
     margin: 0;
-    padding: 60px 0 102px;
+    padding: 60px 0 90px;
     font: 100 52px/1.3 'Open Sans', sans-serif;
 }
 
@@ -738,7 +738,7 @@ body {
     font: 400 300%/1.3 'Open Sans', sans-serif;
 }
 .magento-features {
-    margin-bottom: 83px;
+    margin-bottom: 70px;
     font-size: 0;
 }
 .magento-features__item {
