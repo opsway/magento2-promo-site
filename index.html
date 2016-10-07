@@ -54,7 +54,7 @@
         <div class="magento-features">
           <div class="magento-features__item">
             <figure class="image image_features"><img src="img/performance.png" alt="Performance">
-              <figcaption class="fadeInDownFast">
+              <figcaption class="hidden" id="ffast">
                 Outstanding performance<br/>
                 <small class="magento-features__item-desc">
                   Magento 2 will run an average of 20% faster.
@@ -66,7 +66,7 @@
           </div>
           <div class="magento-features__item">
             <figure class="image image_features"><img src="img/scalability.png" alt="Scalability">
-              <figcaption class="fadeInDownMed">
+              <figcaption class="hidden" id="fmed">
                 Great new features<br/>
                 <small class="magento-features__item-desc">
                   Mobile compatibility, usability-driven checkout,
@@ -77,7 +77,7 @@
           </div>
           <div class="magento-features__item">
             <figure class="image image_features"><img src="img/comfort.png" alt="Comfort for Managers" style="height: 96px;">
-              <figcaption class="fadeInDownSlow">
+              <figcaption class="hidden" id="fslow">
                 Support<br/>
                 <small class="magento-features__item-desc">
                   Magento development is now targeting version 2.
@@ -260,6 +260,15 @@
             }
             return isValid;
         }
+        //some copy paste from SO for waiting when features screen back loads
+        $('<img/>').attr('src', 'http://magento2.opsway.com/img/slide2-bgr.jpg').load(function() {
+            $(this).remove();
+            $('.land-section.features').css('background-image', 'url(http://magento2.opsway.com/img/slide2-bgr.jpg)');
+            $('#ffast, #fmed, #fslow').removeClass('hidden');
+            $('#ffast').addClass('fadeInDownFast');
+            $('#fmed').addClass('fadeInDownMed');
+            $('#fslow').addClass('fadeInDownSlow');
+        });
     });
     </script>
 </html>
